@@ -8,14 +8,14 @@ The PI recives the data sent to it (angle and acivation state) and drives the IO
 
 
 
-To run the system you must
+To run the system you must  
 --- on the PI ---
 1. Install the rpi_ws281x into the python environment.
 2. Install wiringpi and add it to the python environment.
 3. Install / update mpg123 for audio.
 4. Make sure the analog audio is not default or currently enabled (it will disable PWM to the servo).
-5. Start the python script. The eyes should wipe blue and wait for communication from the server host to begin.
---- on the server ---
+5. Start the python script. The eyes should wipe blue and wait for communication from the server host to begin.  
+--- on the server ---  
 6. Install opencv-3.4.3 on the server computer.
 7. Start the Vision application on the server computer. It should have the correct IP for the camera and PI compiled in.
 8. The eyes should turn black and the console will declare "beginning animation".
