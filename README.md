@@ -9,7 +9,7 @@ The PI recives the data sent to it (angle and acivation state) and drives the IO
 
 
 To run the system you must  
---- on the PI ---
+	--- on the PI ---
 1. Install the rpi_ws281x into the python environment.
 2. Install wiringpi and add it to the python environment.
 3. Install / update mpg123 for audio.
