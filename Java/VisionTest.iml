@@ -7,7 +7,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="opencv-343" level="project" />
     <orderEntry type="library" name="TESLib_1.3" level="project" />
+    <orderEntry type="library" name="opencv-343" level="project" />
   </component>
 </module>

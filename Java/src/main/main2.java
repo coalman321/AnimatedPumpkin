@@ -10,11 +10,13 @@ import java.util.Collections;
 
 public class main2 {
 
+    private static String pathToOpenCV = "D:\\Github Repos\\AnimatedPumpkin\\Java\\opencv\\";
+
     public static void main(String[] args){
         ConOutMain.createConsole(false);
         String camPath = "rtsp://admin:admin@192.168.1.175:8554/CH001.sdp";
-        String casPath = "C:\\Users\\Cole Tucker\\Documents\\intelijprojects\\opencv\\build\\etc\\haarcascades\\haarcascade_frontalface_default.xml";
-        String piIP = "192.168.1.22";
+        String casPath = pathToOpenCV + "build\\etc\\haarcascades\\haarcascade_frontalface_default.xml";
+        String piIP = "192.168.1.43";
         System.out.println("created console");
         try {
             UDPServer server = new UDPServer(piIP, 1110, false);

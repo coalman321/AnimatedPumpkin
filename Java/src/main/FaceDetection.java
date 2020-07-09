@@ -1,6 +1,7 @@
 package main;
 
 import com.org.MiscLibs.RequiresCatch;
+import org.opencv.core.Core;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfRect;
 import org.opencv.core.Rect;
@@ -13,9 +14,11 @@ import java.util.List;
 
 public class FaceDetection {
 
+    private static String pathToOpenCV = "D:\\Github Repos\\AnimatedPumpkin\\Java\\opencv\\";
+
     static{
-        System.load("C:\\Users\\Cole Tucker\\Documents\\intelijprojects\\VisionTest\\src\\bin\\opencv_java343.dll");
-        System.load("C:\\Users\\Cole Tucker\\Documents\\intelijprojects\\VisionTest\\src\\bin\\opencv_ffmpeg343_64.dll");
+        System.load(pathToOpenCV + "build\\java\\x64\\opencv_java343.dll");
+        System.load(pathToOpenCV + "build\\bin\\opencv_ffmpeg343_64.dll");
     }
 
     private VideoCapture capture;
@@ -40,6 +43,7 @@ public class FaceDetection {
             capture.read(color);
             Imgproc.cvtColor(color, grey, Imgproc.COLOR_BGR2GRAY);
             Imgproc.equalizeHist(grey, grey);
+            Core.flip(grey, grey,0);
             faceClass.detectMultiScale(grey, faces, 1.3, 5);
             faceList = faces.toList();
             hasChanged(faceList);
